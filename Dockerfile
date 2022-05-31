@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM quay.io/jitesoft/alpine:latest
 
-LABEL maintainer="Peng Xiao <egarcia@baustro.fin.ec>"
+LABEL maintainer="Andres Garcia <egarcia@baustro.fin.ec>"
 
 RUN apk add --no-cache net-snmp-tools && \
     mkdir /var/lib/net-snmp && \
