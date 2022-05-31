@@ -1,9 +1,8 @@
 FROM alpine:latest
 
-LABEL maintainer="Peng Xiao <xiaoquwl@gmail.com>"
+LABEL maintainer="Peng Xiao <egarcia@baustro.fin.ec>"
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache net-snmp-tools && \
+RUN apk add --no-cache net-snmp-tools && \
     mkdir /var/lib/net-snmp && \
     mkdir /var/lib/net-snmp/mib_indexes && \
     apk add --no-cache snmptt && \
@@ -17,7 +16,5 @@ RUN apk update && apk upgrade && \
     apk add --no-cache mtr
 
 WORKDIR /omd
-
-VOLUME ["/omd"]
 
 CMD []
