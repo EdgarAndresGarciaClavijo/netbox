@@ -1,8 +1,8 @@
-FROM quay.io/jitesoft/alpine:latest
+FROM quay.io/centos/centos
 
 LABEL maintainer="Andres Garcia <egarcia@baustro.fin.ec>"
 
-RUN apk add traceroute
+RUN yum install traceroute
 
 WORKDIR /omd
 
